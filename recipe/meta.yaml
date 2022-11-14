@@ -1,5 +1,5 @@
 {% set name = "nelson-siegel-svensson" %}
-{% set version = "0.4.3" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/nelson_siegel_svensson-{{ version }}.tar.gz
-  sha256: 5b55336c1d16205fb6e3730e57527efc3a6e4ae1161b18f8256df2881b20d4b2
+  sha256: cc1ed8ba0d12f236490da5bc5eadf846e0baeb92f4935223cc99dfbd44c018e2
 
 build:
   entry_points:
     - nelson_siegel_svensson=nelson_siegel_svensson.cli:cli_main
-  noarch: python 
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
